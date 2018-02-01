@@ -1,0 +1,48 @@
+{% extends "master.html" %}
+{% block title %} {% endblock %}
+
+{% block styles %}
+{{ super() }}
+
+<style>
+    img {
+        width: 250px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+      <h2>Your Upload</h2>
+      <img class="img-rounded" src="{{ filepath }}"/>
+    </div>
+
+    <div class="container">
+      <h2>Best Matches</h2>
+  
+      <a title="{{ matches_name }}">
+
+        <img class="img-rounded"
+             src="{{ matches_prod_image }}"
+             />
+
+          <h4>           
+            <a href=https://wiseodd.github.io/techblog/2016/07/18/convnet-maxpool-layer/ style="color:#5DD9C1"> <b>Get the Dress!</b></a>
+          </h4>
+	
+	<img class="img-rounded"
+             src="{{ matches_image }}"
+             />
+	    <h4>
+           
+            <a href=https://wiseodd.github.io/techblog/2016/07/18/convnet-maxpool-layer/ style="color:#5DD9C1"> <b>Get the Heels!</b></a>
+          </h4>
+
+	 <a href="http://images.asos-media.com/products/asos-lace-waist-and-cuff-pleated-midi-dress/8609479-3">
+<img border="0" src="http://images.asos-media.com/products/asos-lace-waist-and-cuff-pleated-midi-dress/8609479-3" width="100" height="300">
+	</a> 
+
+
+
+    </div>
+{% endblock %}

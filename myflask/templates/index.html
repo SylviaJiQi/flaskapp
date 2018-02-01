@@ -1,0 +1,31 @@
+{% extends "master.html" %}
+{% block title %}Perfect Heeels!{% endblock %}
+
+{% block content %}
+<div class="container">
+  <header>
+	  <h1>Perfect Heels!</h1>
+  </header>
+  <h4>Upload an image of a dress and I will find matching heels</h4>
+
+  <div class="row">
+	<form method="post" action="{{ url_for('match_item') }}" enctype="multipart/form-data">
+	  <input type="file" name="query" placeholder="Upload photo"/>
+	  <button type="submit" class="btn btn-primary" name="push">
+		Upload &nbsp;<i class="fa fa-upload"></i>
+	  </button>
+	</form>
+  </div>
+</div>
+
+
+<div class="container">
+ <header>
+    <h2>Before you start ....</h2>   
+  </header>
+  <h4> For the best result, please have your dress on a hanger or flat surface with good lighting and a clean background. </h4>
+  <h4> Example </h4>
+
+  <img class="img-rounded" src="/static/images/_11978041.jpg"/>
+</div>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends "master.html" %}
+{% block title %} | Additional Title Info{% endblock %}
+
+{% block styles %}
+{{ super() }}
+
+<style>
+    img {
+        width: 250px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+      <h2>Your Upload</h2>
+      <img class="img-rounded" src="{{ filepath }}"/>
+    </div>
+
+    <div class="container">
+      <h2>Best Matches</h2>
+      <h4>Click on a dress to shop!</h4>
+      {% for i in range(matches_num) %}
+      <a href="{{ matches_urls[i] }}" title="{{ matches_name[i] }}">
+          {% if 1 %}
+        <img class="img-rounded"
+             src="{{ matches_prod_image[i] }}"
+             />
+          {% else %}
+          No image found.
+          {% endif %}
+      </a>
+      {% endfor %}
+
+
+    </div>
+{% endblock %}
